@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advocate PCG - Legal Advocate, Former Civil Judge & JMFC with over 25 years of experience in criminal, civil, revenue, labour, and family law in Gujarat.">
+    <meta name="keywords" content="Pareshkumar Godigajbar, Godigajbar, PCG, Bharuch, legal advocate, civil judge, JMFC, Gujarat lawyer, criminal law, civil disputes, family law, labour law, revenue matters, RTI advocacy">
+    <meta name="author" content="Advocate PCG">
+    <title>Pareshkumar C. Godigajbar | Advocate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #c5a572;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2d4a7c 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(197, 165, 114, 0.1) 0%, transparent 70%);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-50px, 50px) rotate(180deg); }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #b8975e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(197, 165, 114, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .about-image-placeholder {
+            color: var(--white);
+            font-size: 5rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Education & Experience Cards */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            background: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-date {
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-subtitle {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Practice Areas */
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .practice-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .practice-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .practice-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .practice-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--bg-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .contact-details a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .contact-details a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-cta {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-cta p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--primary-color);
+            transform: rotate(90deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 5rem 2rem;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .modal-content {
+                padding: 2rem;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--secondary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Adv. PCG</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#practice">Practice Areas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Pareshkumar C. Godigajbar</h1>
+            <p>SERVING JUSTICE. DEFENDING LEGACY. EMPOWERING COMMUNITIES.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Committed to Justice, Integrity, and Community Empowerment</p>
+        <div class="about-content">
+            <div class="about-image">
+                <!-- Replace 'your-photo.jpg' with the actual path to your HEIF/converted image -->
+                <img src="pc.jpg" alt="Advocate PCG - Professional Photo">
+                <!-- If image is not available, the gradient background will show -->
+            </div>
+            <div class="about-text">
+                <h3>Legal Advocate & Former Judicial Officer</h3>
+                <p>I bring over two decades of experience in legal advocacy, having served clients across criminal, civil, revenue, labour, and family law domains. My journey includes 5½ years as a Civil Judge and Judicial Magistrate First Class (JMFC) in the Gujarat Judiciary, where I upheld the law with fairness, dignity, and procedural rigor.</p>
+                <p>My practice is not just professional—it is personal. I carry forward the legacy of my late father, Eminent lawyer Chhaganbhai B. Godigajbar, whose life was devoted to justice, institutional upliftment, and community empowerment. I remain committed to those values, offering legal services that are transparent, accessible, and rooted in integrity.</p>
+                <p>I also actively support legal education, RTI advocacy, and cultural literacy—empowering others to understand and assert their rights.</p>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5½</div>
+                        <div class="stat-label">Years as Judge/JMFC</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Commitment to Justice</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <p class="section-subtitle">A Legacy of Service to Justice</p>
+        <div class="timeline">
+            <div class="timeline-item" onclick="openModal('experience1')">
+                <div class="timeline-date">Present</div>
+                <h3 class="timeline-title">Legal Advocate in Private Practice</h3>
+                <div class="timeline-subtitle">Gujarat, India</div>
+                <p class="timeline-description">Providing comprehensive legal services across criminal, civil, revenue, labour, and family law. Continuing the legacy of justice and community empowerment established by my late father.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('experience2')">
+                <div class="timeline-date">5½ Years</div>
+                <h3 class="timeline-title">Civil Judge & Judicial Magistrate First Class (JMFC)</h3>
+                <div class="timeline-subtitle">Gujarat Judiciary</div>
+                <p class="timeline-description">Served with distinction in the Gujarat Judiciary, presiding over civil and criminal matters with fairness, dignity, and adherence to procedural rigor. Gained invaluable insight into judicial processes and the administration of justice.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('experience3')">
+                <div class="timeline-date">Legacy</div>
+                <h3 class="timeline-title">Carrying Forward a Family Legacy</h3>
+                <div class="timeline-subtitle">In Memory of Eminent Lawyer Chhaganbhai B. Godigajbar</div>
+                <p class="timeline-description">Following in the footsteps of my late father, whose dedication to justice, institutional upliftment, and community service continues to inspire my practice. Committed to providing transparent, accessible legal services rooted in integrity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="practice">
+        <h2 class="section-title">Practice Areas</h2>
+        <p class="section-subtitle">Comprehensive Legal Services Across Multiple Domains</p>
+        <div class="practice-grid">
+            <div class="practice-card" onclick="openModal('practice1')">
+                <div class="practice-icon">⚖️</div>
+                <h3>Criminal Law</h3>
+                <p>Defense and representation in criminal cases, bail applications, and trial advocacy.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice2')">
+                <div class="practice-icon">🏛️</div>
+                <h3>Civil Disputes</h3>
+                <p>Property matters, contracts, injunctions, and civil litigation.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice3')">
+                <div class="practice-icon">🌾</div>
+                <h3>Revenue Matters</h3>
+                <p>Land records, tenancy, agricultural disputes, and revenue appeals.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice4')">
+                <div class="practice-icon">👷</div>
+                <h3>Labour Law</h3>
+                <p>Worker rights, industrial disputes, and employment-related litigation.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice5')">
+                <div class="practice-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Disputes</h3>
+                <p>Custody, maintenance, domestic violence, divorce, and marriage-related legal issues.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice6')">
+                <div class="practice-icon">💰</div>
+                <h3>Cheque Bounce Cases</h3>
+                <p>Legal remedies under the Negotiable Instruments Act for dishonored cheques.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice7')">
+                <div class="practice-icon">🤝</div>
+                <h3>Trade Union & Service Matters</h3>
+                <p>Representation in service-related disputes, union rights, and employment grievances.</p>
+            </div>
+            <div class="practice-card" onclick="openModal('practice8')">
+                <div class="practice-icon">📚</div>
+                <h3>RTI & Legal Education</h3>
+                <p>Guidance on Right to Information applications and public legal awareness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Ready to discuss your legal needs? Reach out today.</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h3>Office Address</h3>
+                        <p><a href="https://www.google.com/maps/place/HEAVEN+arcade/@21.711764,72.9938872,17z/data=!3m1!4b1!4m6!3m5!1s0x3be020b25f01b625:0xdf3559ba196a8c5f!8m2!3d21.711764!4d72.9964621!16s%2Fg%2F11s660kvfn?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">404, Heaven Arcade, Near Gujarat Gas,<br>Beside Godi Road, Bharuch - 392001</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+919737392426">+91 97373 92426</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:parcg17@gmail.com">parcg17@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div class="contact-details">
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday<br>11:00 AM - 6:00 PM<br><span style="font-size: 0.9rem; opacity: 0.8;">Weekend appointments available</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-cta">
+            <p>Prefer to schedule directly?</p>
+            <a href="tel:+919737392426" class="btn btn-primary">Call Now for Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:parcg17@gmail.com" aria-label="Email">✉️</a>
+        </div>
+        <p>&copy; 2025 Pareshkumar C. Godigajbar, Advocate. All rights reserved.</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">Licensed to practice in Gujarat, India</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Show/hide scroll to top button
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Modal functionality
+        const modalContent = {
+        };
+
+        function openModal(contentId) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modalBody');
+            const content = modalContent[contentId];
+            
+            if (content) {
+                modalBody.innerHTML = `
+                    <h2 style="color: var(--primary-color); margin-bottom: 2rem;">${content.title}</h2>
+                    ${content.content}
+                `;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items and practice cards
+        document.querySelectorAll('.timeline-item, .practice-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
